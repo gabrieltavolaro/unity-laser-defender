@@ -21,11 +21,13 @@ public class EnemySpawner : MonoBehaviour
     {
         for (int enemyCount = 0; enemyCount < waveConfiguration.GetNumberOfEnemies(); enemyCount++)
         {
-            Instantiate(
+            var newEnemy = Instantiate(
             waveConfiguration.GetEnemyPrefab(),
             waveConfiguration.GetWaypoints()[0].transform.position,
             Quaternion.identity
-        );
+            );
+
+            newEnemy.GetComponent<EnemyPathing>().SetWaveConfiguration(waveConfiguration);
 
             yield return new WaitForSeconds(waveConfiguration.GetSpawnIntervalTime());
         }
