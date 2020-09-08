@@ -35,7 +35,7 @@ public class WaveConfiguration : ScriptableObject
 
     public float GetSpawnRandomFactor() { return spawnRandomFactor; }
 
-    public int GetNumberOfEnemier() { return numberOfEnemies; }
+    public int GetNumberOfEnemies() { return numberOfEnemies; }
 
     public float GetMoveSpeed() { return moveSpeed; }
 
