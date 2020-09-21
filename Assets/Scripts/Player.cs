@@ -61,6 +61,8 @@ public class Player : MonoBehaviour
 
     private void Die()
     {
+        FindObjectOfType<Level>().LoadGameOver();
+
         Destroy(gameObject);
 
         // Sound FX
