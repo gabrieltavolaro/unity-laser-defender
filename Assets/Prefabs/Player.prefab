@@ -100,7 +100,7 @@ MonoBehaviour:
   health: 200
   laserPrefab: {fileID: 825064124355656917, guid: eef5d85fd3ffc4a6e8ce3df0b581dfbc,
     type: 3}
-  projectileSpeed: 20
+  projectileSpeed: 25
   projectileRate: 0.1
 --- !u!60 &8335403412831897931
 PolygonCollider2D:
