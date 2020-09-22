@@ -8,7 +8,9 @@ public class Enemy : MonoBehaviour
     [Header("Enemy")]
     [SerializeField] float health = 100;
     [SerializeField] float shotCounter;
+    [SerializeField] int scoreValue = 125;
 
+    [Header("Shooting")]
     [SerializeField] float minTimeBetweenShots = 0.2f;
     [SerializeField] float maxTimeBetweenShots = 3f;
 
@@ -77,6 +79,9 @@ public class Enemy : MonoBehaviour
 
     private void Die()
     {
+        // Add Score
+        FindObjectOfType<GameSession>().AddToScore(scoreValue);
+
         Destroy(gameObject);
 
         // Instatiate explosion VFX
