@@ -7,7 +7,6 @@ public class Enemy : MonoBehaviour
     // Configuration Parameters
     [Header("Enemy")]
     [SerializeField] float health = 100;
-    [SerializeField] float shotCounter;
     [SerializeField] int scoreValue = 125;
 
     [Header("Shooting")]
@@ -27,6 +26,10 @@ public class Enemy : MonoBehaviour
     [SerializeField] [Range(0, 1)] float deathSFXVolume = 0.7f;
     [SerializeField] AudioClip shootSFX;
     [SerializeField] [Range(0, 1)] float shootSFXVolume = 0.2f;
+
+    // Variables
+
+    float shotCounter;
 
     // Start is called before the first frame update
     void Start()
